@@ -1,24 +1,17 @@
-apply plugin: plugin.androidApp
+apply plugin: plugin.androidLib
 
 android {
     compileSdkVersion androidBuild.compileSdkVersion
     buildToolsVersion androidBuild.buildToolsVersion
 
     defaultConfig {
-        applicationId "net.zpavelocity.im.imapp"
         minSdkVersion androidBuild.minSdkVersion
         targetSdkVersion androidBuild.targetSdkVersion
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        // ARouter
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -27,11 +20,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    dataBinding {
-        enabled = true
-    }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -42,8 +30,7 @@ dependencies {
 
     implementation deps.android.appcompat
     implementation deps.android.material
-    implementation deps.android.constraintlayout
     testImplementation deps.testLibraries.junit
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation deps.testLibraries.junit2
+    androidTestImplementation deps.testLibraries.espresso
 }

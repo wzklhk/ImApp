@@ -1,0 +1,35 @@
+ext {
+    plugin = [
+            java      : 'java',
+            androidApp: 'com.android.application',
+            androidLib: 'com.android.library',
+
+    ]
+    androidBuild = [
+            compileSdkVersion: 30,
+            buildToolsVersion: '30.0.3',
+            minSdkVersion    : 21,
+            targetSdkVersion : 30,
+    ]
+
+    deps = [
+            android      : [
+                    annotation      : 'androidx.annotation.annotation:1.1.0',
+                    appcompat       : 'androidx.appcompat:appcompat:1.3.0',
+                    material        : 'com.google.android.material:material:1.4.0',
+                    constraintlayout: 'androidx.constraintlayout:constraintlayout:2.0.4',
+            ],
+
+            // 阿里巴巴ARouter
+            arouter      : [
+                    api     : 'com.alibaba:arouter-api:1.4.1',
+                    compiler: 'com.alibaba:arouter-compiler:1.2.2',
+            ],
+
+            testLibraries: [
+                    junit   : 'junit:junit:4.13.2',
+                    junit2  : 'androidx.test.ext:junit:1.1.2',
+                    espresso: 'androidx.test.espresso:espresso-core:3.3.0',
+            ]
+    ]
+}
