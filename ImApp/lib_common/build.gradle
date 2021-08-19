@@ -12,6 +12,13 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+
+        // ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -20,6 +27,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -27,10 +39,14 @@ android {
 }
 
 dependencies {
-
     implementation deps.android.appcompat
+    implementation deps.android.constraintlayout
     implementation deps.android.material
     testImplementation deps.testLibraries.junit
     androidTestImplementation deps.testLibraries.junit2
     androidTestImplementation deps.testLibraries.espresso
+
+    // ARouter
+    api deps.arouter.api
+    annotationProcessor deps.arouter.compiler
 }

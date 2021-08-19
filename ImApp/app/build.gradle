@@ -39,11 +39,15 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':lib_common')
+    implementation project(path: ':lib_share')
+
+    // ARouter
+    annotationProcessor deps.arouter.compiler
 
     implementation deps.android.appcompat
-    implementation deps.android.material
-    implementation deps.android.constraintlayout
-    testImplementation deps.testLibraries.junit
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    if (!isModule.toBoolean()) {
+        implementation project(path: ':app_main')
+    }
 }

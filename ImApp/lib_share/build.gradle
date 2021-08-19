@@ -19,6 +19,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -26,10 +31,6 @@ android {
 }
 
 dependencies {
-
+    implementation project(path: ':lib_common')
     implementation deps.android.appcompat
-    implementation deps.android.material
-    testImplementation deps.testLibraries.junit
-    androidTestImplementation deps.testLibraries.junit2
-    androidTestImplementation deps.testLibraries.espresso
 }

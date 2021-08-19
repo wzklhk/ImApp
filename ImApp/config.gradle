@@ -22,14 +22,17 @@ ext {
 
             // 阿里巴巴ARouter
             arouter      : [
-                    api     : 'com.alibaba:arouter-api:1.4.1',
-                    compiler: 'com.alibaba:arouter-compiler:1.2.2',
+                    api     : 'com.alibaba:arouter-api:1.5.2',
+                    compiler: 'com.alibaba:arouter-compiler:1.5.2',
             ],
 
             testLibraries: [
                     junit   : 'junit:junit:4.13.2',
                     junit2  : 'androidx.test.ext:junit:1.1.2',
                     espresso: 'androidx.test.espresso:espresso-core:3.3.0',
-            ]
+            ],
+
+            fastjson     : 'com.alibaba:fastjson:1.2.48',
+            gson         : 'com.google.code.gson:gson:2.8.5',
     ]
 }

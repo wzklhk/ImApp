@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/velocity/Desktop/ImApp/ImApp/app/src/main/res/layout/activity_main.xml" value="0.19140308191403083" />
         <entry key="..\:/Users/velocity/Desktop/ImApp/ImApp/app_main/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/velocity/Desktop/ImApp/ImApp/lib_share/src/main/res/layout/activity_im.xml" value="0.178125" />
+        <entry key="..\:/Users/velocity/Desktop/ImApp/ImApp/lib_share/src/main/res/layout/activity_im_start_page.xml" value="0.20244565217391305" />
+        <entry key="..\:/Users/velocity/Desktop/ImApp/ImApp/lib_share/src/main/res/layout/activity_main.xml" value="0.20244565217391305" />
       </map>
     </option>
   </component>
