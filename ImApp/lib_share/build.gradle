@@ -31,6 +31,10 @@ android {
 }
 
 dependencies {
+    testImplementation deps.testLib.junit
+    androidTestImplementation deps.testLib.androidxJunit
+    androidTestImplementation deps.testLib.runner
+    androidTestImplementation deps.testLib.espresso
+
     implementation project(path: ':lib_common')
-    implementation deps.android.appcompat
 }

@@ -39,12 +39,15 @@ android {
 }
 
 dependencies {
-    implementation deps.android.appcompat
-    implementation deps.android.constraintlayout
-    implementation deps.android.material
-    testImplementation deps.testLibraries.junit
-    androidTestImplementation deps.testLibraries.junit2
-    androidTestImplementation deps.testLibraries.espresso
+    testImplementation deps.testLib.junit
+    androidTestImplementation deps.testLib.androidxJunit
+    androidTestImplementation deps.testLib.runner
+    androidTestImplementation deps.testLib.espresso
+
+    api deps.android.appcompat
+    api deps.android.material
+    api deps.android.annotation
+    api deps.android.constraintlayout
 
     // ARouter
     api deps.arouter.api

@@ -39,13 +39,16 @@ android {
 }
 
 dependencies {
+    testImplementation deps.testLib.junit
+    androidTestImplementation deps.testLib.androidxJunit
+    androidTestImplementation deps.testLib.runner
+    androidTestImplementation deps.testLib.espresso
+
     implementation project(path: ':lib_common')
     implementation project(path: ':lib_share')
 
     // ARouter
     annotationProcessor deps.arouter.compiler
-
-    implementation deps.android.appcompat
 
     if (!isModule.toBoolean()) {
         implementation project(path: ':app_main')

@@ -8,12 +8,19 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_main"
+            android:id="@+id/tv_main_page"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/black"
             android:gravity="center"
-            android:text="main"
-            android:textSize="20sp" />
+            android:text="main page"
+            android:textColor="@color/white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
 
     </LinearLayout>
 </layout>

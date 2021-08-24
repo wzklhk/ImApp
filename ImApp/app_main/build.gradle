@@ -35,6 +35,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -42,10 +43,13 @@ android {
 }
 
 dependencies {
+    testImplementation deps.testLib.junit
+    androidTestImplementation deps.testLib.androidxJunit
+    androidTestImplementation deps.testLib.runner
+    androidTestImplementation deps.testLib.espresso
+
     implementation project(path: ':lib_common')
     implementation project(path: ':lib_share')
 
     annotationProcessor deps.arouter.compiler
-
-    implementation deps.android.appcompat
 }
